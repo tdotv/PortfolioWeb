@@ -156,19 +156,18 @@ h3 {
 .nav-btns {
     display: inline-flex;
     align-items: center;
-    
-    /* font-size: 1.5rem; */
+    font-size: 1.5rem;  /* Not sure about size HOME HOME HOME 1.15 rem    */
+    column-gap: 1rem;
 }
 
 .change-theme {
-    width: 50%;
-    height: 50%;
     cursor: pointer;
 }
 
 .nav-toggle {
+    font-size: 1.85rem;
     cursor: pointer;
-    display: none;
+    /* display: none; */
 }
 
 /* NOT WORKING - no dot down the active link */
