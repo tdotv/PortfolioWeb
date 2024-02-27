@@ -12,6 +12,10 @@
 
 .home .intro img {
     margin-bottom: var(--m-1);
+    border-radius: 50%;
+    border: 2px solid #000;
+    width: 250px;
+    height: 250px;
 }
 
 .home .intro .social-icons {
