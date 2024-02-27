@@ -146,7 +146,7 @@ h3 {
 .nav-link {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    transition: .2s;
+    transition: .3s;
 }
 
 .nav-link:hover {
@@ -167,7 +167,10 @@ h3 {
 .nav-toggle {
     font-size: 1.85rem;
     cursor: pointer;
-    /* display: none; */
+}
+
+.nav-toggle {
+    display: none;
 }
 
 /* NOT WORKING - no dot down the active link */
@@ -180,7 +183,7 @@ h3 {
     content: '';
     position: absolute;
     bottom: -0.75rem;
-    left: 50%;
+    left: 45%;
     width: 0.3rem;
     height: 0.3rem;
     background-color: var(--color-primary);
