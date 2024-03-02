@@ -93,6 +93,11 @@ h3 {
     margin: auto;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .padd-15 {
     padding-left: 15px;
     padding-right: 15px;
