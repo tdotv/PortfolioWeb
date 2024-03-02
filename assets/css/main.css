@@ -88,8 +88,7 @@
     height: 0.25rem;
     position: absolute;
     top: var(--m-0-5);
-    left: 40%;
+    left: 38.5%;
     display: block;
     animation: ani-mouse 2s linear infinite;
-
 }
