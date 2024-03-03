@@ -139,3 +139,11 @@ h3 {
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
+
+.footer {
+    padding: 60px 0;
+}
+
+.footer-text {
+    text-align: center;
+}
