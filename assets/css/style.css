@@ -10,6 +10,8 @@
     --color-primary: hsl(352, 75%, 60%);
     --color-dark: hsl(252, 30%, 17%);
     --color-alt: #575757;
+    --bg-primary-color: #db6f6f;
+    --bg-color-alt: #d4d4d4;
 
     /* font - .5rem = 8px | 1rem = 16px */
     --body-font: "Rubik", sans-serif;
@@ -29,6 +31,7 @@
     --m-1-5: 1.5rem;
     --m-2: 2rem;
     --m-2-5: 2.5rem;
+    --m-3: 3rem;
 
     --card-padding: 1.9rem 0.95rem;
     --border-radius: 1.25rem;
@@ -337,6 +340,13 @@ h3 {
     margin-top: var(--m-0-5);
 }
 
+.first-section-title {
+    font-size: var(--h1-font-size);
+    margin-left: var(--m-0-75);
+    margin-bottom: var(--m-2-5);
+    padding-top: 6.75rem;
+}
+
 .about-img {
     flex: 0 0 25%;
     max-width: 25%;
@@ -370,14 +380,14 @@ h3 {
     display: inline-flex;
 }
 
-/* skills preview */
-.skills .skill-item {
+/* services */
+.services .service-item {
     flex: 0 0 50%;
     max-width: 50%;
     display: flex;
 }
 
-.skills .skill-item .skill-item-inner {
+.services .service-item .service-item-inner {
     border-radius: var(--border-radius);
     padding: var(--card-padding);
     text-align: center;
@@ -385,22 +395,22 @@ h3 {
     transition: 0.3s;
 }
 
-.skills .skill-item .skill-item-inner:hover {
+.services .service-item .service-item-inner:hover {
     transform: translateY(-0.625rem);
 }
 
-.skill-item-inner img {
+.service-item-inner img {
     margin-bottom: var(--m-0-75);
     border-radius: 25%;
     width: 300px;
     height: 300px;
 }
 
-.skills .skill-item img {
+.services .service-item img {
     margin-bottom: var(--m-0-75);
 }
 
-.skill-item h3 {
+.service-item h3 {
     margin-bottom: var(--m-0-5);
     font-size: var(--h3-font-size);
 }
@@ -412,6 +422,10 @@ h3 {
 
 .text a {
     color: var(--color-primary);
+}
+
+.text-sm {
+    font-size: var(--small-font-size);
 }
 
 /* footer */
@@ -433,12 +447,11 @@ h3 {
     column-gap: 3.75rem;
 }
 
-.resume-title {
+.resume-title,
+.skills-title {
     text-align: center;
     letter-spacing: 0.4em;
     margin-bottom: 2em;
-    margin-top: 0.3em;
-    font-size: var(--small-font-size);
 }       
 
 .resume-item {
@@ -459,18 +472,16 @@ h3 {
     border: 2px solid var(--color-dark);
     position: absolute;
     left: -0.5rem;
-    background-color: var(--color-light);
+    background-color: var(--color-primary);
 }
 
 .resume-subtitle {
     margin-bottom: 0.3em;
-    font-size: var(--small-font-size);
 }
 
 .resume-date {
     color: var(--color-alt);
     margin-bottom: 0.7em;
-    font-size: var(--small-font-size);
 }
 
 .resume-description {
@@ -479,3 +490,32 @@ h3 {
 }
 
 /* skills */
+.skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.75rem;
+}
+
+.skills-list {
+    row-gap: 1.8rem;
+}
+
+.skills-titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.625rem;
+}
+
+.skills-bar,
+.skills-percentage {
+    height: 5px;
+    border-radius: 0.25rem;
+}
+
+.skills-bar {
+    background-color: var(--bg-color-alt);
+}
+
+.skills-percentage {
+    display: block;
+    background-color: var(--color-primary);
+}
