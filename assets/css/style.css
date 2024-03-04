@@ -5,7 +5,7 @@
 
     /* colors - hsl (оттенок, насыщение, яркость) */
     --color-white: hsl(252, 30%, 100%);
-    --color-light: hsl(252, 30%, 92%);
+    --color-light: hsl(255, 35%, 93%);
     --color-gray: hsl(252, 15%, 65%);
     --color-primary: hsl(352, 75%, 60%);
     --color-dark: hsl(252, 30%, 17%);
@@ -437,6 +437,8 @@ h3 {
     text-align: center;
     letter-spacing: 0.4em;
     margin-bottom: 2em;
+    margin-top: 0.3em;
+    font-size: var(--small-font-size);
 }       
 
 .resume-item {
@@ -449,7 +451,7 @@ h3 {
     padding-bottom: 3rem;
 }
 
-.resume-item::before {
+.resume-item::before {  /* line height sets up height for text and that's why circles are higher */
     content: '';
     width: 10px;
     height: 10px;
@@ -457,22 +459,23 @@ h3 {
     border: 2px solid var(--color-dark);
     position: absolute;
     left: -0.5rem;
-    /* bottom: 5px; */
     background-color: var(--color-light);
 }
 
 .resume-subtitle {
-    margin-bottom: 0.3  em;
+    margin-bottom: 0.3em;
     font-size: var(--small-font-size);
 }
 
 .resume-date {
     color: var(--color-alt);
     margin-bottom: 0.7em;
+    font-size: var(--small-font-size);
 }
 
 .resume-description {
     text-align: justify;
+    font-size: var(--normal-font-size);
 }
 
 /* skills */
