@@ -519,3 +519,9 @@ h3 {
     display: block;
     background-color: var(--color-primary);
 }
+
+/* projects */
+.project-item {
+    grid-template-columns: 5fr 7fr;
+    
+}
