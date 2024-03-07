@@ -564,7 +564,7 @@ h3 {
     border-radius: 0.2rem;
 }
 
-.project-link {
+.projects-container .project-link {
     float: right;
     margin-top: 4rem;
     color: var(--color-primary);
