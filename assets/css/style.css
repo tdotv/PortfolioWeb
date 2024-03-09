@@ -51,6 +51,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body,
 button,
 input,
@@ -556,15 +560,14 @@ h3 {
 }
 
 .project-item {
-  grid-template-columns: 6fr 6fr;
+  grid-template-columns: 6.5fr 5.5fr;
+  column-gap: 1rem;
 }
 
 .project-img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
+  border-radius: var(--border-radius);
 }
 
 .project-data {
@@ -588,6 +591,7 @@ h3 {
 .tags li {
   display: inline-block;
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   box-shadow: 0 1px 4px rgb(0 0 0 / 14%);
   background-color: var(--bg-color-alt);
   padding: 0.3rem 0.6rem;
