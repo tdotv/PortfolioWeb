@@ -639,9 +639,13 @@ h3 {
 }
 
 .contact-information {
-  display: flex;
+  display: inline-flex;
   margin-bottom: var(--m-2);
   align-items: center;
+}
+
+.contact-information:not(:first-child) {
+  margin-left: 2rem;
 }
 
 .contact-icon {
