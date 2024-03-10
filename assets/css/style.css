@@ -471,14 +471,14 @@ h3 {
 	padding-left:15px;
 	margin-right:auto;
 	margin-left:auto;
-	max-width:800px
+	max-width:700px
 }
 
 #proparallax {
 	display: block;
 	position: relative;
 	overflow: hidden;
-	min-height: 37.5rem; /*39*/
+	min-height: 31rem;
 	border: 5px black;
   border-radius: var(--border-radius);
 	box-shadow: 0px 8px 10px 8px grey;
@@ -487,14 +487,14 @@ h3 {
 #proparallax img {
 	position: absolute;
 	width: 50rem;
-	height: 37.5rem;
+	height: 31rem;
 	overflow: hidden;
 	object-fit: cover;
 }
 
 @keyframes parallax_one {
 	0% {
-		height: 37.5rem;
+		height: 31rem;
 		width: 50rem;
 		left: 0rem;
 		opacity: 1;
@@ -509,7 +509,7 @@ h3 {
 		right: 50rem;
 	}
 	33.33% {
-		height: 37.5rem;
+		height: 31rem;
 		width: 0rem;
 		left: 0rem;
 		right: 0rem;
@@ -523,7 +523,7 @@ h3 {
 		opacity: 0;
 	}
 	94.44% {
-		height: 37.5rem;
+		height: 31rem;
 		width: 0rem;
 		left: 50rem;
 		opacity: 1;
@@ -545,7 +545,7 @@ h3 {
 	}
 	27.78% {
 		width: 0rem;
-		height: 37.5rem;
+		height: 31rem;
 		left: 50rem;
 		opacity: 1;
 	}
@@ -566,7 +566,7 @@ h3 {
 		width: 0rem;
 		right: 0rem;
 		left: 0rem;
-		height: 37.5rem;
+		height: 31rem;
 		opacity: 1;
 	}
 	66.68% {
@@ -586,7 +586,7 @@ h3 {
 	}
 	61.11% {
 		width: 0rem;
-		height: 37.5rem;
+		height: 31rem;
 		left: 50rem;
 		opacity: 1;		
 	}
@@ -607,7 +607,7 @@ h3 {
 		width: 0rem;
 		right: 0rem;
 		left: 0rem;
-		height: 37.5rem;
+		height: 31rem;
 		opacity: 1;
 	}
 }
