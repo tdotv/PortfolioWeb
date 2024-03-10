@@ -1,142 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- css -->
-        <link rel="stylesheet" href="assets/css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- line icons -->
-        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        <title>Portfolio Website</title>
-    </head>
-    <body>
-        <!-- header -->
-        <header class="header" id="header">
-            <nav class="nav container ">
-                <a href="/index.html" class="nav-logo">
-                    <h2>tdotv</h2>
-                </a>
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="/index.html"class="nav-link active-link">Home</a>
+    <!-- line icons -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <nav class="nav container ">
+            <a href="/index.html" class="nav-logo">
+                <h2>tdotv</h2>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link active-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/skills&experience.html" class="nav-link">Skills&Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contactme.html" class="nav-link">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-btns">
+                <i class="lni lni-pallet change-theme" id="theme-button"></i>
+                <!-- <img src="/assets/image/pallet.svg" class="change-theme" id="theme-button" /> -->
+                <div class="nav-toggle" class="burger-menu" id="nav-toggle">
+                    <i class="lni lni-grid-alt"></i>
+                    <!-- <img src="/assets/image/grid-alt.svg" /> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="main-content">
+        <section class="home" id="home">
+            <div class="container">
+                <div class="intro">
+                    <img src="/assets/image/доволен.jpeg" alt="tdotv">
+                    <h1>Oleg Turelskiy</h1>
+                    <span>I'm a <span class="info-text">Software Engineer</span></span>
+                    <ul class="social-icons">
+                        <li><a href="https://github.com/tdotv"><i class="lni lni-github-original"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/turelskiy-tdotv/"><i class="lni lni-linkedin"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/skills&experience.html"class="nav-link">Skills&Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/contactme.html"class="nav-link">Contact Me</a>
-                        </li>
+                        <li><a href="https://t.me/arbuzhochy"><i class="lni lni-telegram-original"></i></a></li>
                     </ul>
-                </div>
-                <div class="nav-btns">
-                    <i class="lni lni-pallet change-theme" id="theme-button"></i>
-                    <!-- <img src="/assets/image/pallet.svg" class="change-theme" id="theme-button" /> -->
-                    <div class="nav-toggle" class="burger-menu" id="nav-toggle">
-                        <i class="lni lni-grid-alt"></i>
-                        <!-- <img src="/assets/image/grid-alt.svg" /> -->
+                    <div>
+                        <a href="/contactme.html" class="btn btn-default">Hire me</a>
+                    </div>
+                    <div class="scroll-down">
+                        <a href="#aboutme" class="mouse-wrapper">
+                            <span>Scroll Down</span>
+                            <span class="mouse">
+                                <span class="wheel"></span>
+                            </span>
+                        </a>
                     </div>
                 </div>
-            </nav>
-        </header>
-        
-        <!-- main -->
-        <main class="main-content">
-            <section class="home" id="home">
-                <div class="container">
-                    <div class="intro">
-                        <img src="/assets/image/доволен.jpeg" alt="tdotv">
-                        <h1>Oleg Turelskiy</h1>
-                        <span>I'm a <span class="info-text">Software Engineer</span></span>
-                        <ul class="social-icons">
-                            <li><a href="https://github.com/tdotv"><i class="lni lni-github-original"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/turelskiy-tdotv/"><i class="lni lni-linkedin"></i></a></li>
-                            <li><a href="https://t.me/arbuzhochy"><i class="lni lni-telegram-original"></i></a></li>
-                        </ul>
-                        <div>
-                            <a href="/contactme.html" class="btn btn-default">Hire me</a> <!--ссылочки #-->
-                        </div>
-                        <div class="scroll-down">
-                            <a href="#aboutme" class="mouse-wrapper">
-                                <span>Scroll Down</span>
-                                <span class="mouse">
-                                    <span class="wheel"></span>
-                                </span>
-                            </a>
-                        </div>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section class="about section">
+            <a name="aboutme"></a>
+            <div class="container">
+                <h2 class="section-title ">About Me</h2>
+                <div class="row">
+                    <div class="about-img ">
+                        <img src="/assets/image/утомился.jpeg" alt="tdotv">
+                        <div class="about-content"></div>
                     </div>
-                </div>
-            </section>
-            
-            <!-- about -->
-            <section class="about section">
-                <a name="aboutme"></a>
-                <div class="container">
-                    <h2 class="section-title ">About Me</h2>
-                    <div class="row">
-                        <div class="about-img ">
-                            <img src="/assets/image/утомился.jpeg" alt="tdotv">
-                            <div class="about-content"></div>
-                        </div>
-                        <div class="about-content ">
-                            <div class="rounded">
-                                <div class="row">
-                                    <div class="about-text ">
-                                        <p>I have basic skills and knowledge in software development. I know an acceptable level of English and try to use it. 
-                                            Aim to improve my skills of professional communication and study of various technologies and services. 
-                                            <br/>Interested in BlockChain and .NET</p>
-                                        <div>
-                                            <a href="/assets/image/CV.pdf" class="btn btn-default" target="_blank">DOWNLOAD CV</a>
-                                        </div>
+                    <div class="about-content ">
+                        <div class="rounded">
+                            <div class="row">
+                                <div class="about-text ">
+                                    <p>I have basic skills and knowledge in software development. I know an acceptable
+                                        level of English and try to use it.
+                                        Aim to improve my skills of professional communication and study of various
+                                        technologies and services.
+                                        <br />Interested in BlockChain and .NET
+                                    </p>
+                                    <div>
+                                        <a href="/assets/image/CV.pdf" class="btn btn-default" target="_blank">DOWNLOAD
+                                            CV</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- skills preview -->
-            <section class="services section">
-                <div class="container">
-                    <h2 class="section-title ">Skills</h2>
-                    <div class="row">
-                        <div class="service-item ">
-                            <div class="service-item-inner">
-                                <img src="assets/image/backend-icon-24.png" alt="backend-icon">
-                                <h3>Backend</h3>
-                                <p>.NET Developer. Have some skills in creating web applications using ASP.NET. <br/>
-                                    I also understand how to work with databases using the Entity Framework</p>
-                            </div>
-                        </div>
-                        <div class="service-item ">
-                            <div class="service-item-inner">
-                                <img src="assets/image/devops.png" alt="devops-icon">
-                                <h3>DevOps</h3>
-                                <p>Application lifecycle throughout it's planning, development, delivery and operations phases.
-                                    I know and use CI/CD using Jenkins, GitHub and Linux.
-                                </p>
-                            </div>
+        <!-- skills preview -->
+        <section class="services section">
+            <div class="container">
+                <h2 class="section-title ">Skills Preinfo</h2>
+                <div class="row">
+                    <div class="service-item ">
+                        <div class="service-item-inner">
+                            <img src="assets/image/backend.png" alt="backend-icon">
+                            <h3>Backend</h3>
+                            <p>.NET Developer. Have some skills in creating web applications using ASP.NET. <br />
+                                I also understand how to work with databases using the Entity Framework</p>
                         </div>
                     </div>
-                    <div class="text ">
-                        <p><a href="/skills&experience.html" class="link">Click here</a> to get more information about my skills.</p>
+                    <div class="service-item ">
+                        <div class="service-item-inner">
+                            <img src="assets/image/devops.png" alt="devops-icon">
+                            <h3>DevOps</h3>
+                            <p>Application lifecycle throughout it's planning, development, delivery and operations
+                                phases.
+                                I know and use CI/CD using Jenkins, GitHub and Linux.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </section>
+                <!-- carousel -->
+                <div class="carousel">
+                    <div id="proparallax">
+                        <img class="one" src="/assets/image/carousel1.jpg" />
+                        <img class="two" src="/assets/image/carousel2.jpeg" />
+                        <img class="three" src="/assets/image/carousel3.jpg" />
+                    </div>
+                </div>
+                <div class="text">
+                    <p><a href="/skills&experience.html" class="link">Click here</a> to get more information about my
+                        skills.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- footer -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-text ">
-                        <p>&copy;tdotv</p>
-                    </div>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-text ">
+                    <p>&copy;tdotv</p>
                 </div>
-            </footer>
-        </main>
-    </body>
+            </div>
+        </footer>
+    </main>
+</body>
+
 </html>
