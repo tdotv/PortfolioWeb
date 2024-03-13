@@ -66,11 +66,8 @@
   /* font - .5rem = 8px | 1rem = 16px */
   --body-font: "Rubik", sans-serif;
   --h1-font-size: 1.65rem;
-  /* 1.55 */
   --h2-font-size: 1.45rem;
-  /* 1.35 */
   --h3-font-size: 1.25rem;
-  /* 1.15 */
 
   --normal-font-size: 1.15rem;
   --small-font-size: 1rem;
@@ -95,8 +92,17 @@
   --dot-size: 15px;
 }
 
+
 @media screen and (max-width:1440px) {
-  
+  :root {
+  --h1-font-size: 1.45rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.15rem;
+
+  --normal-font-size: 1.05rem;
+  --small-font-size: 0.95rem;
+  }
+
 }
 
 /* base */
@@ -884,8 +890,8 @@ h3 {
 
 .contact .container {
   row-gap: 3rem;
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .contact-information {
@@ -993,6 +999,7 @@ h3 {
   display: grid;
   place-items: center;
   font-size: var(--small-font-size);
+  display: none;
 }
 
 .customize-theme .card {
@@ -1122,4 +1129,27 @@ h3 {
   height: 1.4rem;
   border: 2px solid var(--color-gray);
   border-radius: 50%;
+}
+
+@media only screen and (max-width:768px) {
+  .about-content, .about-img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about-img {
+    text-align: center;
+  }
+
+  .project-item {
+    grid-template-columns: 12fr;
+  }
+  
+  .project-img {
+    margin-bottom: var(--m-2);
+  }
+
+  .project-stack {
+    width: 100%;
+  }
+  
 }
