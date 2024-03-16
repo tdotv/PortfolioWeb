@@ -912,7 +912,9 @@ h3 {
 }
 
 .contact-information {
-  display: inline-flex;
+  display: flex;
+  max-width: 768px;
+  justify-content: space-between;
   margin-bottom: var(--m-2);
   align-items: center;
 }
@@ -947,14 +949,7 @@ h3 {
 .contact-information img {
   width: 43px;
   height: 43px;
-  border: none;
-  border-radius: 0%;
   margin-right: 1rem;
-  margin-left: 1rem;
-}
-
-.contact-information img:not(:first-child) {
-  margin-left: 3.5rem;
 }
 
 .contact-icon {
@@ -1237,7 +1232,7 @@ h3 {
   }
 
   .contact .section-subtitle {
-    margin-bottom: var(--m-0-5);
+    margin-bottom: var(--m-0-75);
   }
 
   .contact-information {
@@ -1250,9 +1245,5 @@ h3 {
   .contact-title,
   .contact-subtitle {
     width: 100%;
-  }
-
-  .contact-information img:not(:first-child) {
-    margin-left: 1rem;
   }
 }
