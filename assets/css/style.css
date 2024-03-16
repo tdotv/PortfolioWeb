@@ -1211,6 +1211,7 @@ h3 {
     display: inline-flex;
   }
 
+  .projects, .project-item,
   .services .service-item,
   .about-content .about-text {
     flex: 0 0 100%;
@@ -1231,6 +1232,10 @@ h3 {
     margin-top: 2em;
   }
 
+  .contact .section-title {
+    margin-top: var(--m-0-75);
+  }
+
   .contact .section-subtitle {
     margin-bottom: var(--m-0-75);
   }
@@ -1245,5 +1250,16 @@ h3 {
   .contact-title,
   .contact-subtitle {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width:388px) {
+  .contact .section-title {
+    margin-top: var(--m-0-5);
+  }
+
+  .contact-inputs {
+    row-gap: 1rem;
+    margin-bottom: var(--m-1);
   }
 }
