@@ -67,6 +67,8 @@
   --bg-primary-color: #db6f6f;
   --bg-color-alt: #d4d4d4;
 
+  --image-filter: none;
+
   /* font - .5rem = 8px | 1rem = 16px */
   --body-font: "Rubik", sans-serif;
   --h1-font-size: 1.65rem;
@@ -175,6 +177,7 @@ h3 {
   border: none;
   margin-bottom: 0;
   border-radius:0%;
+  filter: var(--image-filter);
 }
 
 .home .intro .icon {
@@ -1132,13 +1135,13 @@ h3 {
 }
 
 .customize-theme .choose-bg .bg-1 {
-  background: var(--color-light);
-  color: var(--color-dark);
+  background: hsl(252, 30%, 92%);
+  color: hsl(252, 30%, 17%);
 }
 
 .customize-theme .choose-bg .bg-2 {
-  background: var(--color-dark);
-  color: var(--color-white);
+  background: hsl(252, 30%, 10%);
+  color: #fff;
 }
 
 .customize-theme .choose-bg > div span {
@@ -1198,7 +1201,7 @@ h3 {
   .nav-menu {
     position: fixed;
     background: var(--color-white);
-    width: 80%;
+    width: 33%;
     height: 100%;
     top: 0;
     right: -100%;
@@ -1255,6 +1258,12 @@ h3 {
   .contact-title,
   .contact-subtitle {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .nav-menu {
+    width: 78.5%;
   }
 }
 

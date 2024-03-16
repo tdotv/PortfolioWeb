@@ -34,8 +34,11 @@ const theme = document.querySelector("#theme-button");
 const themeModal = document.querySelector(".customize-theme");
 const fontSizes = document.querySelectorAll(".choose-size span");
 const colorPalette = document.querySelectorAll(".choose-color span");
+const bg1 = document.querySelector(".bg-1");
+const bg2 = document.querySelector(".bg-2");
 
 var root = document.querySelector(":root");
+
 
 // open modal
 const openThemeModal = () => {
@@ -110,4 +113,36 @@ colorPalette.forEach(color => {
         color.classList.add("active");
         root.style.setProperty("--primary-color-hue", primaryHue);
     })
+})
+
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
+
+// change background color
+const changeBg = () => {
+    root.style.setProperty("--light-color-lightness", lightColorLightness);
+    root.style.setProperty("--white-color-lightness", whiteColorLightness);
+    root.style.setProperty("--dark-color-lightness", darkColorLightness);
+}
+bg1.addEventListener("click", () => {
+    darkColorLightness = "17%";
+    lightColorLightness = "93%";
+    whiteColorLightness = "100%";
+
+    bg1.classList.add("active");
+    bg2.classList.remove("active");
+    root.style.setProperty("--image-filter", "invert(0)");
+    changeBg();
+})
+
+bg2.addEventListener("click", () => {
+    darkColorLightness = "95%";
+    lightColorLightness = "20%";
+    whiteColorLightness = "15%";
+
+    bg2.classList.add("active");
+    bg1.classList.remove("active");
+    root.style.setProperty("--image-filter", "invert(1)");
+    changeBg();
 })
