@@ -53,11 +53,15 @@
   /*56px*/
 
   /* colors - hsl (оттенок, насыщение, яркость) */
-  --color-white: hsl(252, 30%, 100%);
-  --color-light: hsl(255, 35%, 93%);
+  --primary-color-hue: 352;
+  --dark-color-lightness: 17%;
+  --light-color-lightness: 93%;
+  --white-color-lightness: 100%;
+  --color-white: hsl(252, 30%, var(--white-color-lightness));
+  --color-light: hsl(255, 35%, var(--light-color-lightness));
   --color-gray: hsl(252, 15%, 65%);
-  --color-primary: hsl(352, 75%, 60%);
-  --color-dark: hsl(252, 30%, 17%);
+  --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
+  --color-dark: hsl(252, 30%, var(--dark-color-lightness));
   --color-alt: #575757;
   --border-color: #d6d6d6;
   --bg-primary-color: #db6f6f;
