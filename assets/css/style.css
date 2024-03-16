@@ -1149,6 +1149,7 @@ h3 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .about-img {
     text-align: center;
   }
@@ -1196,7 +1197,7 @@ h3 {
     width: 80%;
     height: 100%;
     top: 0;
-    right: 100%;
+    right: -100%;
     padding: 4rem 0 0 3rem;
     border-radius: 1rem 0 0 1rem;
     z-index: 100;
