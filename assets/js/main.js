@@ -151,19 +151,27 @@ bg2.addEventListener("click", () => {
 const contactForm = document.getElementById("contact-form"),
       contactEmail = document.getElementById("contact-email"),
       contactSubject = document.getElementById("contact-subject"),
-      Message = document.getElementById("message"),
-      errorMessage = document.getElementById('error-message');
+      contactMessage = document.getElementById("message");
 
 const sendEmail = (e) => {
     e.preventDefault();
 
     // check if the field has a value
+    console.log(contactMessage);
     
-    contactForm.addEventListener("submit", (event) => {
-        if(contactEmail.value === "" || contactSubject.value === "" || Message.value === "") {
-            event.preventDefault();
-            errorMessage.style.display = 'block';
-        }
-    })
+    if(contactEmail.value === "" || contactSubject.value === "" || contactMessage.value === "") {
+        alertify.error("You should fill all the input fields!");
+    } else {
+        //  serviceId - templateId - #form - publickey
+        emailjs.sendForm("service_52xs2bt", "template_1pesm7h", "#contact-form", "FQGzjktgZf1SZDXPO")
+        .then(() => {
+            // show message
+            alertify.success("Accepted");
+        },
+        (error) => {
+            alertify.error("Something went wrong...", error);
+        });
+    }
+};
 
-}
+contactForm.addEventListener("submit", sendEmail);

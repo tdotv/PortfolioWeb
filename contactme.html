@@ -8,6 +8,10 @@
         <!-- css -->
         <link rel="stylesheet" href="assets/css/style.css">
 
+        <!--alertify-->
+        <link rel="stylesheet" href="assets/alertify/css/alertify.min.css" />
+        <link rel="stylesheet" href="assets/alertify/css/themes/default.min.css" />
+
         <title>Portfolio Website</title>
     </head>
     <body>
@@ -79,15 +83,15 @@
                                 <div class="contact-inputs">
                                     <div class="contact-content">
                                         <label for="contact-email" class="contact-label">Email</label>
-                                        <input type="email" class="contact-input" id="contact-email">
+                                        <input type="email" name="email" class="contact-input" id="contact-email">
                                     </div>
                                     <div class="contact-content">
                                         <label for="contact-subject" class="contact-label">Subject</label>
-                                        <input type="text" class="contact-input" id="contact-subject">
+                                        <input type="text" name="subject" class="contact-input" id="contact-subject">
                                     </div>
                                     <div class="contact-content contact-area">
-                                        <label class="contact-label">Message</label>
-                                        <textarea name="" id="" cols="30" rows="5" class="contact-input" id="message"></textarea>
+                                        <label for="message" class="contact-label">Message</label>
+                                        <textarea type="text" name="message" cols="30" rows="5" class="contact-input" id="message"></textarea>
                                     </div>
                                 </div>
 
@@ -101,11 +105,55 @@
             </section>
         </main>
 
+        <!-- theme customize -->
+        <div class="customize-theme">
+            <div class="card">
+                <h2>Customize your view</h2>
+                <p>Manage your font size, color and background</p>
+                <div class="font-size">
+                    <h3>Font Size</h3>
+                    <div>
+                        <h6>Aa</h6>
+                        <div class="choose-size">
+                            <span class="font-size-1"></span>
+                            <span class="font-size-2 active"></span>
+                            <span class="font-size-3"></span>
+                        </div>
+                        <h4>Aa</h4>
+                    </div>
+                </div>
+                <div class="color">
+                    <h3>Color</h3>
+                    <div class="choose-color">
+                        <span class="color-1"></span>
+                        <span class="color-2 active"></span>
+                        <span class="color-3"></span>
+                    </div>
+                </div>
+                <div class="background">
+                    <h3>Background</h3>
+                    <div class="choose-bg">
+                        <div class="bg-1 active">
+                            <span></span>
+                            <h5 for="bg-1">Light</h5>
+                        </div>
+                        <div class="bg-2">
+                            <span></span>
+                            <h5 for="bg-2">Dark</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- email js -->
         <script
             type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
         </script>
+
+        <!--alertify js-->
+        <script src="assets/alertify/alertify.min.js"></script>
 
         <!-- my js -->
         <script src="/assets/js/main.js"></script>
