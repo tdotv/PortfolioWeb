@@ -118,17 +118,24 @@ colorPalette.forEach(color => {
 let lightColorLightness;
 let whiteColorLightness;
 let darkColorLightness;
+let altColor;
+let altColorDark;
 
 // change background color
 const changeBg = () => {
     root.style.setProperty("--light-color-lightness", lightColorLightness);
     root.style.setProperty("--white-color-lightness", whiteColorLightness);
     root.style.setProperty("--dark-color-lightness", darkColorLightness);
+    root.style.setProperty("--color-alt", altColor);
+    root.style.setProperty("--color-alt-dark", altColorDark);
 }
 bg1.addEventListener("click", () => {
     darkColorLightness = "17%";
     lightColorLightness = "93%";
     whiteColorLightness = "100%";
+
+    altColor = "#d4d4d4";
+    altColorDark = "#4d4d4d";
 
     bg1.classList.add("active");
     bg2.classList.remove("active");
@@ -140,6 +147,9 @@ bg2.addEventListener("click", () => {
     darkColorLightness = "95%";
     lightColorLightness = "20%";
     whiteColorLightness = "15%";
+
+    altColor = "#4d4d4d";
+    altColorDark = "#d4d4d4";
 
     bg2.classList.add("active");
     bg1.classList.remove("active");
@@ -156,9 +166,7 @@ const contactForm = document.getElementById("contact-form"),
 const sendEmail = (e) => {
     e.preventDefault();
 
-    // check if the field has a value
-    console.log(contactMessage);
-    
+    // check if the field has a value 
     if(contactEmail.value === "" || contactSubject.value === "" || contactMessage.value === "") {
         alertify.error("You should fill all the input fields!");
     } else {

@@ -62,10 +62,9 @@
   --color-gray: hsl(252, 15%, 65%);
   --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
   --color-dark: hsl(252, 30%, var(--dark-color-lightness));
-  --color-alt: #575757;
+  --color-alt-dark: #4d4d4d;
   --border-color: #d6d6d6;
-  --bg-primary-color: #db6f6f;
-  --bg-color-alt: #d4d4d4;
+  --color-alt: #d4d4d4;
 
   --image-filter: none;
 
@@ -122,6 +121,11 @@ html, body {
   scroll-behavior: smooth;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
 body,
 button,
 input,
@@ -169,6 +173,11 @@ h2 {
 
 h3 {
   font-size: var(--h3-font-size);
+}
+
+input {
+  background-color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .icon {
@@ -537,7 +546,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: var(--bg-primary-color);
+  background-color: var(--color-primary);
   transition: opacity 300ms, transform 300ms;
   opacity: 1;
   transform: scale(0);
@@ -812,7 +821,7 @@ h3 {
 }
 
 .skills-bar {
-  background-color: var(--bg-color-alt);
+  background-color: var(--color-alt);
 }
 
 .skills-percentage {
@@ -852,6 +861,7 @@ h3 {
 
 .project-stack {
   margin-bottom: 1.25em;
+  width: 100%;
 }
 
 .tags li {
@@ -859,7 +869,8 @@ h3 {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   box-shadow: 0 1px 4px rgb(0 0 0 / 14%);
-  background-color: var(--bg-color-alt);
+  background-color: var(--color-alt);
+  color: var(--color-dark);
   padding: 0.3rem 0.6rem;
   border-radius: 0.3rem;
 }
@@ -880,7 +891,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: var(--bg-primary-color);
+  background-color: var(--color-primary);
   transition: opacity 300ms, transform 300ms;
   opacity: 0;
   transform: scale(0);
@@ -942,7 +953,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: var(--bg-primary-color);
+  background-color: var(--color-primary);
   transition: opacity 300ms, transform 300ms;
   opacity: 0;
   transform: scale(0);
@@ -993,6 +1004,7 @@ h3 {
   border: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
   background-color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .contact-label {
@@ -1169,10 +1181,6 @@ h3 {
   
   .project-img {
     margin-bottom: var(--m-2);
-  }
-
-  .project-stack {
-    width: 100%;
   }
 
   .section .container {
