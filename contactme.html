@@ -29,6 +29,9 @@
                             <a href="/contactme.html" class="nav-link active-link">Contact Me</a>
                         </li>
                     </ul>
+                    <div class="nav-close" id="nav-close">
+                        <img src="/assets/image/close-line.svg" class="icon"/>
+                    </div>
                 </div>
                 <div class="nav-btns">
                     <img src="/assets/image/palette-line.svg" class="icon change-theme" id="theme-button" />
@@ -72,24 +75,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <form action="" class="contact-form grid">
+                            <form action="" class="contact-form grid" id="contact-form">
                                 <div class="contact-inputs">
                                     <div class="contact-content">
-                                        <label for="emailInput" class="contact-label">Email</label>
-                                        <input type="email" class="contact-input" id="emailInput">
+                                        <label for="contact-email" class="contact-label">Email</label>
+                                        <input type="email" class="contact-input" id="contact-email">
                                     </div>
                                     <div class="contact-content">
-                                        <label for="subjectInput" class="contact-label">Subject</label>
-                                        <input type="text" class="contact-input" id="subjectInput">
+                                        <label for="contact-subject" class="contact-label">Subject</label>
+                                        <input type="text" class="contact-input" id="contact-subject">
                                     </div>
                                     <div class="contact-content contact-area">
                                         <label class="contact-label">Message</label>
-                                        <textarea name="" id="" cols="30" rows="5" class="contact-input"></textarea>
+                                        <textarea name="" id="" cols="30" rows="5" class="contact-input" id="message"></textarea>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <a href="#" class="btn btn-default">Send Message</a>
+                                    <button type="submit" class="btn btn-default">Send Message</button>
                                 </div>
                             </form>
                         </div>
@@ -98,6 +101,13 @@
             </section>
         </main>
 
+        <!-- email js -->
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+
+        <!-- my js -->
         <script src="/assets/js/main.js"></script>
     </body>
 </html>

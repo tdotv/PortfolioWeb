@@ -146,3 +146,24 @@ bg2.addEventListener("click", () => {
     root.style.setProperty("--image-filter", "invert(1)");
     changeBg();
 })
+
+// contact form
+const contactForm = document.getElementById("contact-form"),
+      contactEmail = document.getElementById("contact-email"),
+      contactSubject = document.getElementById("contact-subject"),
+      Message = document.getElementById("message"),
+      errorMessage = document.getElementById('error-message');
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    // check if the field has a value
+    
+    contactForm.addEventListener("submit", (event) => {
+        if(contactEmail.value === "" || contactSubject.value === "" || Message.value === "") {
+            event.preventDefault();
+            errorMessage.style.display = 'block';
+        }
+    })
+
+}
