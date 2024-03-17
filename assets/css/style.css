@@ -97,6 +97,11 @@
   --dot-size: 15px;
 }
 
+[data-theme="dark"] {
+  --darkColorLightness: "95%";
+  --lightColorLightness: "20%";
+  --whiteColorLightness: "15%";
+}
 
 @media screen and (max-width:1440px) {
   :root {

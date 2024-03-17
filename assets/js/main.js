@@ -39,7 +39,6 @@ const bg2 = document.querySelector(".bg-2");
 
 var root = document.querySelector(":root");
 
-
 // open modal
 const openThemeModal = () => {
     themeModal.style.display = "grid";
@@ -129,6 +128,7 @@ const changeBg = () => {
     root.style.setProperty("--color-alt", altColor);
     root.style.setProperty("--color-alt-dark", altColorDark);
 }
+
 bg1.addEventListener("click", () => {
     darkColorLightness = "17%";
     lightColorLightness = "93%";
@@ -140,6 +140,8 @@ bg1.addEventListener("click", () => {
     bg1.classList.add("active");
     bg2.classList.remove("active");
     root.style.setProperty("--image-filter", "invert(0)");
+
+    localStorage.setItem("theme", "light");
     changeBg();
 })
 
@@ -154,8 +156,34 @@ bg2.addEventListener("click", () => {
     bg2.classList.add("active");
     bg1.classList.remove("active");
     root.style.setProperty("--image-filter", "invert(1)");
+
+    localStorage.setItem("theme", "dark");
     changeBg();
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      darkColorLightness = "95%";
+      lightColorLightness = "20%";
+      whiteColorLightness = "15%";
+      altColor = "#4d4d4d";
+      altColorDark = "#d4d4d4";
+      bg2.classList.add("active");
+      bg1.classList.remove("active");
+      root.style.setProperty("--image-filter", "invert(1)");
+    } else {
+      darkColorLightness = "17%";
+      lightColorLightness = "93%";
+      whiteColorLightness = "100%";
+      altColor = "#d4d4d4";
+      altColorDark = "#4d4d4d";
+      bg1.classList.add("active");
+      bg2.classList.remove("active");
+      root.style.setProperty("--image-filter", "invert(0)");
+    }
+    changeBg();
+  });
 
 // contact form
 const contactForm = document.getElementById("contact-form"),
