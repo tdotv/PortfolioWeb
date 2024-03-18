@@ -1252,3 +1252,62 @@ input {
     flex-wrap: wrap;
   }
 }
+#alert-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.success {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--m-1);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.success.show {
+  opacity: 1;
+}
+
+.success-close {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff;
+}
+
+.danger {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--m-1);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.danger.show {
+  opacity: 1;
+}
+
+.danger-close {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff;
+}

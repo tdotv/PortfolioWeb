@@ -1,18 +1,16 @@
 const navMenu = document.getElementById("nav-menu"),
-      navToggle = document.getElementById("nav-toggle"),
-      navClose = document.getElementById("nav-close")
+    navToggle = document.getElementById("nav-toggle"),
+    navClose = document.getElementById("nav-close")
 
 // show menu
-if(navToggle)
-{
+if (navToggle) {
     navToggle.addEventListener("click", () => {
         navMenu.classList.add("show-menu")
     })
 }
 
 // menu hidden
-if(navClose)
-{
+if (navClose) {
     navClose.addEventListener("click", () => {
         navMenu.classList.remove("show-menu")
     })
@@ -21,8 +19,7 @@ if(navClose)
 // for mobile
 const navLinks = document.querySelectorAll(".nav-link")
 
-function linkAction()
-{
+function linkAction() {
     const navMenu = document.getElementById("nav-menu")
     // when we click on each nav link, we remove the show menu class
     navMenu.classList.remove("show-menu")
@@ -45,8 +42,7 @@ const openThemeModal = () => {
 
 // close modal
 const closeThemeModal = (e) => {
-    if(e.target.classList.contains("customize-theme"))
-    {
+    if (e.target.classList.contains("customize-theme")) {
         themeModal.style.display = "none";
     }
 }
@@ -66,18 +62,15 @@ fontSizes.forEach(size => {
         removeSizeSelector();
         let fontSize;
         size.classList.toggle("active");
-        if(size.classList.contains("font-size-1"))
-        {
+        if (size.classList.contains("font-size-1")) {
             fontSize = "14px";
             localStorage.setItem("font", "font-size-1");
         }
-        else if(size.classList.contains("font-size-2"))
-        {
+        else if (size.classList.contains("font-size-2")) {
             fontSize = "16px"
             localStorage.setItem("font", "font-size-2");
         }
-        else if(size.classList.contains("font-size-3"))
-        {
+        else if (size.classList.contains("font-size-3")) {
             fontSize = "18px"
             localStorage.setItem("font", "font-size-3");
         }
@@ -137,66 +130,142 @@ bg2.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
-      darkColorLightness = "95%";
-      lightColorLightness = "20%";
-      whiteColorLightness = "15%";
-      altColor = "#4d4d4d";
-      altColorDark = "#d4d4d4";
-      bg2.classList.add("active");
-      bg1.classList.remove("active");
-      root.style.setProperty("--image-filter", "invert(1)");
+        darkColorLightness = "95%";
+        lightColorLightness = "20%";
+        whiteColorLightness = "15%";
+        altColor = "#4d4d4d";
+        altColorDark = "#d4d4d4";
+        bg2.classList.add("active");
+        bg1.classList.remove("active");
+        root.style.setProperty("--image-filter", "invert(1)");
     } else {
-      darkColorLightness = "17%";
-      lightColorLightness = "93%";
-      whiteColorLightness = "100%";
-      altColor = "#d4d4d4";
-      altColorDark = "#4d4d4d";
-      bg1.classList.add("active");
-      bg2.classList.remove("active");
-      root.style.setProperty("--image-filter", "invert(0)");
+        darkColorLightness = "17%";
+        lightColorLightness = "93%";
+        whiteColorLightness = "100%";
+        altColor = "#d4d4d4";
+        altColorDark = "#4d4d4d";
+        bg1.classList.add("active");
+        bg2.classList.remove("active");
+        root.style.setProperty("--image-filter", "invert(0)");
     }
     changeBg();
 
     removeSizeSelector();
     const savedFont = localStorage.getItem("font");
     let fontSize;
-    if(savedFont === "font-size-1") {
+    if (savedFont === "font-size-1") {
         document.querySelector(".font-size-1").classList.add("active");
         fontSize = "14px";
-    } else if(savedFont === "font-size-2") {
+    } else if (savedFont === "font-size-2") {
         document.querySelector(".font-size-2").classList.add("active");
         fontSize = "16px";
-    } else if(savedFont === "font-size-3") {
+    } else if (savedFont === "font-size-3") {
         document.querySelector(".font-size-3").classList.add("active");
         fontSize = "18px";
     }
     const htmlElement = document.querySelector("html");
     htmlElement.style.fontSize = fontSize;
-  });
+});
 
 // contact form
 const contactForm = document.getElementById("contact-form"),
-      contactEmail = document.getElementById("contact-email"),
-      contactSubject = document.getElementById("contact-subject"),
-      contactMessage = document.getElementById("message");
+    contactEmail = document.getElementById("contact-email"),
+    contactSubject = document.getElementById("contact-subject"),
+    contactMessage = document.getElementById("message");
 
 const sendEmail = (e) => {
     e.preventDefault();
 
     // check if the field has a value 
-    if(contactEmail.value === "" || contactSubject.value === "" || contactMessage.value === "") {
-        alertify.error("You should fill all the input fields!");
+    if (contactEmail.value === "" || contactSubject.value === "" || contactMessage.value === "") {
+        showDanger("You should fill all the input fields!", 3500);
     } else {
         //  serviceId - templateId - #form - publickey
         emailjs.sendForm("service_52xs2bt", "template_1pesm7h", "#contact-form", "FQGzjktgZf1SZDXPO")
-        .then(() => {
-            // show message
-            alertify.success("Accepted");
-        },
-        (error) => {
-            alertify.error("Something went wrong...", error);
-        });
+            .then(() => {
+                // show message
+                showSuccess("Accepted", 3500);
+            },
+                (error) => {
+                    showDanger("Something went wrong...", 3500);
+                });
     }
 };
 
 contactForm.addEventListener("submit", sendEmail);
+
+function showSuccess(message, duration) {
+    const alertContainer = document.getElementById("alert-container");
+
+    const success = document.createElement("div");
+    success.className = "success";
+
+    const successContent = document.createElement("div");
+    successContent.className = "success-content";
+    successContent.textContent = message;
+    success.appendChild(successContent);
+
+    const closeButton = document.createElement("span");
+    closeButton.className = "success-close";
+    closeButton.textContent = "×";
+    closeButton.addEventListener("click", () => {
+        success.classList.remove("show");
+        setTimeout(() => {
+            success.remove();
+        }, 300);
+    });
+    success.appendChild(closeButton);
+
+    alertContainer.insertBefore(success, alertContainer.firstChild);
+
+    setTimeout(() => {
+        success.classList.add("show");
+    }, 100);
+
+    if (duration) {
+        setTimeout(() => {
+            success.classList.remove("show");
+            setTimeout(() => {
+                success.remove();
+            }, 300);
+        }, duration);
+    }
+}
+
+function showDanger(message, duration) {
+    const alertContainer = document.getElementById("alert-container");
+
+    const danger = document.createElement("div");
+    danger.className = "danger";
+
+    const dangerContent = document.createElement("div");
+    dangerContent.className = "danger-content";
+    dangerContent.textContent = message;
+    danger.appendChild(dangerContent);
+
+    const closeButton = document.createElement("span");
+    closeButton.className = "danger-close";
+    closeButton.textContent = "×";
+    closeButton.addEventListener("click", () => {
+        danger.classList.remove("show");
+        setTimeout(() => {
+            danger.remove();
+        }, 300);
+    });
+    danger.appendChild(closeButton);
+
+    alertContainer.insertBefore(danger, alertContainer.firstChild);
+
+    setTimeout(() => {
+        danger.classList.add("show");
+    }, 100);
+
+    if (duration) {
+        setTimeout(() => {
+            danger.classList.remove("show");
+            setTimeout(() => {
+                danger.remove();
+            }, 300);
+        }, duration);
+    }
+}
