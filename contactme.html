@@ -1,154 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- css -->
-        <link rel="stylesheet" href="assets/css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--alertify-->
-        <link rel="stylesheet" href="assets/alertify/css/alertify.min.css" />
-        <link rel="stylesheet" href="assets/alertify/css/themes/default.min.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-        <title>Portfolio Website</title>
-    </head>
-    <body>
-        <!-- header -->
-        <header class="header" id="header">
-            <nav class="nav container padd-15">
-                <a href="/index.html" class="nav-logo">
-                    <h2>tdotv</h2>
-                </a>
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="/index.html" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/skills&experience.html" class="nav-link">Skills&Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/contactme.html" class="nav-link active-link">Contact Me</a>
-                        </li>
-                    </ul>
-                    <div class="nav-close" id="nav-close">
-                        <img src="/assets/image/close-line.svg" class="icon"/>
-                    </div>
-                </div>
-                <div class="nav-btns">
-                    <img src="/assets/image/palette-line.svg" class="icon change-theme" id="theme-button" />
-                    <div class="nav-toggle" id="nav-toggle">
-                        <img src="/assets/image/menu-line-dark.svg" class="icon burger-menu" id="burger-menu"/>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <!-- contact me -->
-            <section class="contact section">
-                <div class="container padd-15">
-                    <h2 class="section-title">Contact Me</h2>
-                    <span class="section-subtitle">Send me a letter or call me</span>
+  <!--alertify-->
+  <link rel="stylesheet" href="assets/alertify/css/alertify.min.css" />
+  <link rel="stylesheet" href="assets/alertify/css/themes/default.min.css" />
 
-                    <div class="contact-container grid">
-                        <div>
-                            <div class="contact-information">
-                                <div class="contact-item">
-                                    <img src="/assets/image/phone-line.svg" class="icon"/>
-                                    <div>
-                                        <h3 class="contact-title">Call Me</h3>
-                                        <span class="contact-subtitle"><a href="tel:+375 (25)719-57-20">+375(25)719-57-20</a></span>
-                                    </div>
-                                </div>
+  <title>Portfolio Website</title>
+</head>
 
-                                <div class="contact-item">
-                                    <img src="/assets/image/mail-line.svg" class="icon"/>
-                                    <div>
-                                        <h3 class="contact-title">Write Me</h3>
-                                        <span class="contact-subtitle">o.turelskiy@mail.ru</span>
-                                    </div>
-                                </div>
-
-                                <div class="contact-item">
-                                    <img src="/assets/image/map-pin-line.svg" class="icon"/>
-                                    <div>
-                                        <h3 class="contact-title">My Location</h3>
-                                        <a href="https://yandex.by/maps/-/CDFrFV2~" target="_blank">Open the Map</a> 
-                                    </div>
-                                </div>
-                            </div>
-                            <form action="" class="contact-form grid" id="contact-form">
-                                <div class="contact-inputs">
-                                    <div class="contact-content">
-                                        <label for="contact-email" class="contact-label">Email</label>
-                                        <input type="email" name="email" class="contact-input" id="contact-email">
-                                    </div>
-                                    <div class="contact-content">
-                                        <label for="contact-subject" class="contact-label">Subject</label>
-                                        <input type="text" name="subject" class="contact-input" id="contact-subject">
-                                    </div>
-                                    <div class="contact-content contact-area">
-                                        <label for="message" class="contact-label">Message</label>
-                                        <textarea type="text" name="message" cols="30" rows="5" class="contact-input" id="message"></textarea>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button type="submit" class="btn btn-default">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div id="alert-container"></div>
-        </main>
-
-        <!-- theme customize -->
-        <div class="customize-theme">
-            <div class="card">
-                <h2>Customize your view</h2>
-                <p>Manage your font size, color and background</p>
-                <div class="font-size">
-                    <h3>Font Size</h3>
-                    <div>
-                        <h6>Aa</h6>
-                        <div class="choose-size">
-                            <span class="font-size-1"></span>
-                            <span class="font-size-2 active"></span>
-                            <span class="font-size-3"></span>
-                        </div>
-                        <h4>Aa</h4>
-                    </div>
-                </div>
-                <div class="background">
-                    <h3>Background</h3>
-                    <div class="choose-bg">
-                        <div class="bg-1 active">
-                            <span></span>
-                            <h5 for="bg-1">Light</h5>
-                        </div>
-                        <div class="bg-2">
-                            <span></span>
-                            <h5 for="bg-2">Dark</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body>
+  <!-- header -->
+  <header class="header" id="header">
+    <nav class="nav container padd-15">
+      <a href="/index.html" class="nav-logo">
+        <h2>tdotv</h2>
+      </a>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/skills&experience.html" class="nav-link">Skills&Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="/contactme.html" class="nav-link active-link">Contact Me</a>
+          </li>
+        </ul>
+        <div class="nav-close" id="nav-close">
+          <img src="/assets/image/close-line.svg" class="icon" />
         </div>
+      </div>
+      <div class="nav-btns">
+        <img src="/assets/image/palette-line.svg" class="icon change-theme" id="theme-button" />
+        <div class="nav-toggle" id="nav-toggle">
+          <img src="/assets/image/menu-line-dark.svg" class="icon burger-menu" id="burger-menu" />
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- contact me -->
+    <section class="contact section">
+      <div class="container padd-15">
+        <h2 class="section-title">Contact Me</h2>
+        <span class="section-subtitle">Send me a letter or call me</span>
 
-        <!-- email js -->
-        <script
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-        </script>
+        <div class="contact-container grid">
+          <div>
+            <div class="contact-information">
+              <div class="contact-item">
+                <img src="/assets/image/phone-line.svg" class="icon" />
+                <div>
+                  <h3 class="contact-title">Call Me</h3>
+                  <span class="contact-subtitle"><a href="tel:+375 (25)719-57-20">+375(25)719-57-20</a></span>
+                </div>
+              </div>
 
-        <!--alertify js-->
-        <script src="assets/alertify/alertify.min.js"></script>
+              <div class="contact-item">
+                <img src="/assets/image/mail-line.svg" class="icon" />
+                <div>
+                  <h3 class="contact-title">Write Me</h3>
+                  <span class="contact-subtitle">o.turelskiy@mail.ru</span>
+                </div>
+              </div>
 
-        <!-- my js -->
-        <script src="/assets/js/main.js"></script>
-    </body>
+              <div class="contact-item">
+                <img src="/assets/image/map-pin-line.svg" class="icon" />
+                <div>
+                  <h3 class="contact-title">My Location</h3>
+                  <a href="https://yandex.by/maps/-/CDFrFV2~" target="_blank">Open the Map</a>
+                </div>
+              </div>
+            </div>
+            <form action="" class="contact-form grid" id="contact-form">
+              <div class="contact-inputs">
+                <div class="contact-content">
+                  <label for="contact-email" class="contact-label">Email</label>
+                  <input type="email" name="email" class="contact-input" id="contact-email">
+                </div>
+                <div class="contact-content">
+                  <label for="contact-subject" class="contact-label">Subject</label>
+                  <input type="text" name="subject" class="contact-input" id="contact-subject">
+                </div>
+                <div class="contact-content contact-area">
+                  <label for="message" class="contact-label">Message</label>
+                  <textarea type="text" name="message" cols="30" rows="5" class="contact-input" id="message"></textarea>
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-default">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="alert-container"></div>
+  </main>
+
+  <!-- theme customize -->
+  <div class="customize-theme">
+    <div class="card">
+      <h2>Customize your view</h2>
+      <p>Manage your font size, color and background</p>
+      <div class="font-size">
+        <h3>Font Size</h3>
+        <div>
+          <h6>Aa</h6>
+          <div class="choose-size">
+            <span class="font-size-1"></span>
+            <span class="font-size-2 active"></span>
+            <span class="font-size-3"></span>
+          </div>
+          <h4>Aa</h4>
+        </div>
+      </div>
+      <div class="background">
+        <h3>Background</h3>
+        <div class="choose-bg">
+          <div class="bg-1 active">
+            <span></span>
+            <h5 for="bg-1">Light</h5>
+          </div>
+          <div class="bg-2">
+            <span></span>
+            <h5 for="bg-2">Dark</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- email js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+
+  <!--alertify js-->
+  <script src="assets/alertify/alertify.min.js"></script>
+
+  <!-- my js -->
+  <script src="/assets/js/main.js"></script>
+</body>
+
 </html>

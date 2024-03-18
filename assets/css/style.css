@@ -1,49 +1,49 @@
 /* fonts */
 @font-face {
-  font-family: 'Rubik';
-  src: url('/assets/fonts/Rubik/static/Rubik-Regular.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik/static/Rubik-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/assets/fonts/Rubik/static/Rubik-Medium.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik/static/Rubik-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/assets/fonts/Rubik/static/Rubik-MediumItalic.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik/static/Rubik-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 } 
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/assets/fonts/Rubik/static/Rubik-SemiBold.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik/static/Rubik-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/assets/fonts/Rubik/static/Rubik-SemiBoldItalic.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik/static/Rubik-SemiBoldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 } 
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/assets/fonts/Rubik/static/Rubik-Bold.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik/static/Rubik-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/assets/fonts/Rubik/static/Rubik-BoldItalic.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik/static/Rubik-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
@@ -277,7 +277,7 @@ input {
 
 .nav-logo::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 0.3rem;
   height: 0.3rem;
   border-radius: 50%;
@@ -336,7 +336,7 @@ input {
 }
 
 .active-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -0.75rem;
   left: 45%;
@@ -769,7 +769,7 @@ input {
 
 .resume-item::before {
   /* line height sets up height for text and that's why circles are higher */
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   border-radius: 50%;
