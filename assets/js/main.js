@@ -100,8 +100,8 @@ bg1.addEventListener("click", () => {
   lightColorLightness = "93%";
   whiteColorLightness = "100%";
 
-  altColor = "#4d4d4d";
-  altColorDark = "#d4d4d4";
+  altColor = "#d4d4d4";
+  altColorDark = "#4d4d4d";
 
   bg1.classList.add("active");
   bg2.classList.remove("active");
@@ -116,8 +116,8 @@ bg2.addEventListener("click", () => {
   lightColorLightness = "20%";
   whiteColorLightness = "15%";
 
-  altColor = "#d4d4d4";
-  altColorDark = "#4d4d4d";
+  altColor = "#4d4d4d";
+  altColorDark = "#d4d4d4";
 
   bg2.classList.add("active");
   bg1.classList.remove("active");
