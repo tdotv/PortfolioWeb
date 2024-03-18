@@ -784,7 +784,7 @@ input {
 }
 
 .resume-date {
-  color: var(--color-alt);
+  color: var(--color-alt-dark);
   margin-bottom: 0.7em;
 }
 
