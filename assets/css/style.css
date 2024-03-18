@@ -97,12 +97,6 @@
   --dot-size: 15px;
 }
 
-[data-theme="dark"] {
-  --darkColorLightness: "95%";
-  --lightColorLightness: "20%";
-  --whiteColorLightness: "15%";
-}
-
 @media screen and (max-width:1440px) {
   :root {
   --h1-font-size: 1.45rem;
@@ -1053,7 +1047,6 @@ input {
   width: 30px;
 }
 
-/* ?? */
 .customize-theme .font-size {
   margin-top: var(--m-2-5);
 }
@@ -1089,43 +1082,6 @@ input {
 
 .customize-theme .choose-size span.active {
   background: var(--color-primary);
-}
-/* ?? */
-.customize-theme .color {
-  margin-top: var(--m-2);
-}
-
-.customize-theme .choose-color {
-  background: var(--color-light);
-  border-radius: var(--border-radius);
-  padding: 0.6rem 1rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.customize-theme .choose-color span {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background: var(--color-primary);
-  cursor: pointer;
-}
-
-.customize-theme .choose-color span:nth-child(1) {
-  background: hsl(252, 75%, 60%);
-}
-
-.customize-theme .choose-color span:nth-child(2) {
-  background: hsl(352, 75%, 60%);
-}
-
-.customize-theme .choose-color span:nth-child(3) {
-  background: hsl(282, 82%, 52%);
-}
-
-.customize-theme .choose-color span.active {
-  border: 5px solid var(--color-white);
 }
 
 .customize-theme .background {

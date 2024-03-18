@@ -33,7 +33,6 @@ navLinks.forEach(n => n.addEventListener("click", linkAction))
 const theme = document.querySelector("#theme-button");
 const themeModal = document.querySelector(".customize-theme");
 const fontSizes = document.querySelectorAll(".choose-size span");
-const colorPalette = document.querySelectorAll(".choose-color span");
 const bg1 = document.querySelector(".bg-1");
 const bg2 = document.querySelector(".bg-2");
 
@@ -70,47 +69,21 @@ fontSizes.forEach(size => {
         if(size.classList.contains("font-size-1"))
         {
             fontSize = "14px";
+            localStorage.setItem("font", "font-size-1");
         }
         else if(size.classList.contains("font-size-2"))
         {
             fontSize = "16px"
+            localStorage.setItem("font", "font-size-2");
         }
         else if(size.classList.contains("font-size-3"))
         {
             fontSize = "18px"
+            localStorage.setItem("font", "font-size-3");
         }
 
         // change font size of the root element
-        document.querySelector('html').style.fontSize = fontSize;
-    })
-})
-
-// primary colors
-// remove active class
-const changeActiveColorClass = () => {
-    colorPalette.forEach(colorPicker => {
-        colorPicker.classList.remove("active");
-    })
-}
-colorPalette.forEach(color => {
-    color.addEventListener("click", () => {
-        let primaryHue;
-        changeActiveColorClass();
-
-        if(color.classList.contains("color-1"))
-        {
-            primaryHue = 252;
-        }
-        else if(color.classList.contains("color-2"))
-        {
-            primaryHue = 352;
-        }
-        else if(color.classList.contains("color-3"))
-        {
-            primaryHue = 282;
-        }
-        color.classList.add("active");
-        root.style.setProperty("--primary-color-hue", primaryHue);
+        document.querySelector("html").style.fontSize = fontSize;
     })
 })
 
@@ -183,6 +156,22 @@ document.addEventListener("DOMContentLoaded", () => {
       root.style.setProperty("--image-filter", "invert(0)");
     }
     changeBg();
+
+    removeSizeSelector();
+    const savedFont = localStorage.getItem("font");
+    let fontSize;
+    if(savedFont === "font-size-1") {
+        document.querySelector(".font-size-1").classList.add("active");
+        fontSize = "14px";
+    } else if(savedFont === "font-size-2") {
+        document.querySelector(".font-size-2").classList.add("active");
+        fontSize = "16px";
+    } else if(savedFont === "font-size-3") {
+        document.querySelector(".font-size-3").classList.add("active");
+        fontSize = "18px";
+    }
+    const htmlElement = document.querySelector("html");
+    htmlElement.style.fontSize = fontSize;
   });
 
 // contact form
