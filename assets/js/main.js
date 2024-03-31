@@ -192,7 +192,9 @@ const sendEmail = (e) => {
   }
 };
 
-contactForm.addEventListener("submit", sendEmail);
+if (window.location.pathname === "/PortfolioWeb/contactme.html") {
+  contactForm.addEventListener("submit", sendEmail);
+}
 
 function showSuccess(message, duration) {
   const alertContainer = document.getElementById("alert-container");
