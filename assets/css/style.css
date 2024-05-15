@@ -278,7 +278,6 @@ input {
   font-weight: var(--font-semi-bold);
   letter-spacing: 0.1rem;
   position: relative;
-  /* HOW TO UNDERSTAND POSITION */
 }
 
 .nav-logo::after {
@@ -364,14 +363,6 @@ input {
   max-width: 540px;
   text-align: center;
 }
-
-/* .image-wrapper {
-  flex: 1;
-}
-
-.content-wrapper {
-  flex: 2;
-} */
 
 .home .intro img {  
   margin-bottom: var(--m-1);
@@ -586,7 +577,7 @@ input {
 	max-width:700px
 }
 
-#proparallax {
+.proparallax {
 	display: block;
 	position: relative;
 	overflow: hidden;
@@ -596,7 +587,7 @@ input {
 	box-shadow: 0px 8px 10px 8px grey;
 }
 
-#proparallax img {
+.proparallax img {
 	position: absolute;
 	width: 50rem;
 	height: 31rem;
@@ -724,21 +715,21 @@ input {
 	}
 }
 
-#proparallax img.one{
+.proparallax img.one{
 	animation-name: parallax_one;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-duration: 15s;
 }
 
-#proparallax img.two {
+.proparallax img.two {
 	animation-name: parallax_two;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-duration: 15s;
 }
 
-#proparallax img.three {
+.proparallax img.three {
 	animation-name: parallax_three;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -782,7 +773,6 @@ input {
 }
 
 .resume-item::before {
-  /* line height sets up height for text and that's why circles are higher */
   content: "";
   width: 10px;
   height: 10px;
