@@ -207,17 +207,6 @@ function showSuccess(message, duration) {
   successContent.textContent = message;
   success.appendChild(successContent);
 
-  const closeButton = document.createElement("span");
-  closeButton.className = "success-close";
-  closeButton.textContent = "×";
-  closeButton.addEventListener("click", () => {
-    success.classList.remove("show");
-    setTimeout(() => {
-      success.remove();
-    }, 300);
-  });
-  success.appendChild(closeButton);
-
   alertContainer.insertBefore(success, alertContainer.firstChild);
 
   setTimeout(() => {
@@ -244,17 +233,6 @@ function showDanger(message, duration) {
   dangerContent.className = "danger-content";
   dangerContent.textContent = message;
   danger.appendChild(dangerContent);
-
-  const closeButton = document.createElement("span");
-  closeButton.className = "danger-close";
-  closeButton.textContent = "×";
-  closeButton.addEventListener("click", () => {
-    danger.classList.remove("show");
-    setTimeout(() => {
-      danger.remove();
-    }, 300);
-  });
-  danger.appendChild(closeButton);
 
   alertContainer.insertBefore(danger, alertContainer.firstChild);
 
